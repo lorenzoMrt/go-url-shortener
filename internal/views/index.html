@@ -21,6 +21,10 @@
                     });
 
                     resultDiv.innerHTML = await response.text();
+                    const script = resultDiv.querySelector('script')
+                    if(script) {
+                        eval(script.innerText)
+                    }
                 });
             }
         });
